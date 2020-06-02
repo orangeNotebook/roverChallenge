@@ -1,0 +1,15 @@
+{
+  "name": "robotchallenge",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "test": "mocha test"
+  },
+  "author": "",
+  "license": "n/a",
+  "dependencies": {
+    "chai": "^4.2.0",
+    "mocha": "^7.0.0"
+  }
+}
