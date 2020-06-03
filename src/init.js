@@ -9,8 +9,6 @@ module.exports = (gridX, gridY)=>{
     var gridInstructions = '';
     var startInstructions = '';
     var moveInstructions = '';
-    var arrayX = []
-    var arrayY = []
 
     gridInstructions = instructions[0].replace('\r', "").split(" ");
     startInstructions = instructions[1].replace('\r', "").split(" ");
