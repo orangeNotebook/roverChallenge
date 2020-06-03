@@ -1,5 +1,5 @@
 const { expect } = require('chai');
-var gridCreate = require('../src/grid.js');
+const gridCreate = require('../src/grid.js');
 
 describe('Grid',()=>{
 
