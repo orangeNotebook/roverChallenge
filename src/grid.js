@@ -1,6 +1,4 @@
-const fs = require('fs')
-
-module.exports = (x,y,arrX,arrY) =>{
+module.exports = (x,y,arrX,arrY)=>{
 
     for(var count = 0; count < x; count++){
         arrX[count] = true; //fills x grid with true up until you reach the provided limit

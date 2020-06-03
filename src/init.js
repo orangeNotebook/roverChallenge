@@ -3,7 +3,7 @@ const roverClass = require('./roverClass.js');
 const instructionTranslator = require('../src/instructionTranslator.js');
 const gridCreate = require('../src/grid.js');
 
-module.exports =  (gridX, gridY) =>{
+module.exports = (gridX, gridY)=>{
     
     var instructions = fs.readFileSync('../instructions/instructions.txt').toString().split("\n");
     var gridInstructions = '';

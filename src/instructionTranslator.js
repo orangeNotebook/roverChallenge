@@ -1,7 +1,4 @@
-const fs = require('fs')
-const roverClass = require('./roverClass.js');
-
-module.exports =  (instructions, rover) =>{
+module.exports = (instructions, rover)=>{
 
     for(var i = 0; i < instructions.length; i++) {
         if(instructions[i] == "F"){
