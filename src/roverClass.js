@@ -2,10 +2,10 @@ const fs = require('fs')
 
 class roverClass{
 
-    constructor(){
-        this.rotation = "N"
-        this.xCoord = 0;
-        this.yCoord =0;
+    constructor(rot, x, y){
+        this.rotation = rot;
+        this.xCoord = x;
+        this.yCoord = y;
         this.alive = true;
     };
 
