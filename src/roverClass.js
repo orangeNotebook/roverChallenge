@@ -1,11 +1,9 @@
-const fs = require('fs')
+class roverClass{
 
-class Rover{
-
-    constructor(){
-        this.rotation = "N"
-        this.xCoord = 0;
-        this.yCoord =0;
+    constructor(rot, x, y){
+        this.rotation = rot;
+        this.xCoord = x;
+        this.yCoord = y;
         this.alive = true;
     };
 
@@ -52,4 +50,4 @@ class Rover{
     };
 };
 
-module.exports = Rover
+module.exports = roverClass

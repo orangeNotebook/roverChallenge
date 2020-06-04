@@ -1,6 +1,10 @@
 const fs = require('fs');
+const roverClass = require('./roverClass.js');
+const instructionTranslator = require('../src/instructionTranslator.js');
+const gridCreate = require('../src/grid.js');
+const init = require('../src/init.js');
 
-var instructions = fs.readFileSync('instructionTest.txt').toString().split(" ");
-for(var i = 0; i < instructions.length; i++) {
-    console.log(instructions[i]);
-}
+var gridX = [];
+var gridY = [];
+
+init(gridX, gridY);
