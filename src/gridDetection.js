@@ -28,21 +28,21 @@ module.exports = (rover, gridX, gridY)=>{
     
     //Next few else ifs check if a previous rover died in the direction the rover is looking, if yes then returns false, preventing the 'F' instruction from running
     }else if(rover.rotation == 'E' && gridX[parseFloat(rover.xCoord) + 1] == false && gridY[rover.yCoord] == false){
-        return false;
+        return(false);
     
     }else if(rover.rotation == 'W' && gridX[parseFloat(rover.xCoord) - 1] == false && gridY[rover.yCoord] == false){
-        return false;
+        return(false);
 
     }else if(rover.rotation == 'N' && gridX[rover.xCoord] == false && gridY[parseFloat(rover.yCoord) + 1] == false){
-        return false; 
+        return(false);
 
     }else if(rover.rotation == 'S' && gridX[rover.xCoord] == false && gridY[parseFloat(rover.yCoord) - 1] == false){
-        return false;
+        return(false);
     
     //If no previous rover death is detected, returns true (runs when standing on top of a dead rover corpse but not facing where it died), allowing the 'F' instruction to run
     }else{
-        return true;
-        
+        return(true);
+
     }
     
 }
