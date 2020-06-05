@@ -8,7 +8,7 @@ describe('Grid',()=>{
         var arrayX = [];
         var arrayY = [];
         gridCreate(5,7,arrayX,arrayY);
-        (expect(arrayX.length).to.equal(5) && expect(arrayY.length).to.equal(7))
+        (expect(arrayX.length).to.equal(6) && expect(arrayY.length).to.equal(8))
     })
 
     it('should fill arrayX and arrayY grid with true',()=> {
