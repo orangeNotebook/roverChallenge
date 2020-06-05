@@ -1,5 +1,6 @@
 class roverClass{
 
+    //rovers properties
     constructor(rot, x, y){
         this.rotation = rot;
         this.xCoord = x;
@@ -7,6 +8,7 @@ class roverClass{
         this.alive = true;
     };
 
+    //the left method checks which direction the rover is currently facing, and turns it 90` counter clockwise
     Left(){
         if(this.rotation == "N"){
             this.rotation = "W";
@@ -21,6 +23,7 @@ class roverClass{
         };
     };
 
+    //the right method checks which direction the rover is currently facing, and turns it 90` clockwise
     Right(){
         if(this.rotation == "N"){
             this.rotation = "E";
@@ -35,6 +38,7 @@ class roverClass{
         };
     };
 
+    //the forward method checks which direction the rover is facing and moves it towards that direction one space
     Forward(){
         if(this.rotation == "N"){
             this.yCoord++;

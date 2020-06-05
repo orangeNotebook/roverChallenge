@@ -1,10 +1,9 @@
-const fs = require('fs');
-const roverClass = require('./roverClass.js');
-const instructionTranslator = require('../src/instructionTranslator.js');
-const gridCreate = require('../src/grid.js');
+//importing init function
 const init = require('../src/init.js');
 
+//creates an empty array for mars' grid
 var gridX = [];
 var gridY = [];
 
+//runs init
 init(gridX, gridY);
