@@ -1,5 +1,5 @@
 //importing init function
-const init = require('../src/init.js');
+const init = require("./init.js");
 
 //creates an empty array for mars' grid
 var gridX = [];
