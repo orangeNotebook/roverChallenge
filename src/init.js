@@ -4,7 +4,7 @@ const roverClass = require("./roverClass.js");
 const instructionTranslator = require("./instructionTranslator.js");
 const gridCreate = require("./grid.js");
 
-module.exports = (gridX, gridY) => {
+module.exports = () => {
   //Declaring variabless
   var rover = [];
   var instructions = fs
@@ -17,11 +17,11 @@ module.exports = (gridX, gridY) => {
 
   var gridInstructions = instructions[0].replace("\r", "").split(" "); //splits the grid instructions up into individual indexes within an array and removes \r that arent standalone
 
-  gridCreate(gridInstructions[0], gridInstructions[1], gridX, gridY);
+  var marsGrid = gridCreate(gridInstructions[0], gridInstructions[1]);
 
   //Loops for the amount of instructions, discluding grid creation instructions, divided by 2 (rover spawn instructions, rover move instructions)
   for (var i = 1; i <= instructions.length - 1; i = i + 2) {
-    rover[i] = createRoverAndMove(instructions, rover[i], i, gridX, gridY);
+    rover[i] = createRoverAndMove(instructions, rover[i], i, marsGrid);
 
     if (rover[i].alive) {
       console.log(
@@ -50,7 +50,7 @@ removeAloneExtraChar = (instructions) => {
   }
 };
 
-createRoverAndMove = (instructions, rover, i, gridX, gridY) => {
+createRoverAndMove = (instructions, rover, i, marsGrid) => {
   var startInstructions = instructions[i].replace("\r", "").split(" ");
   var moveInstructions = instructions[i + 1].replace("\r", "").split("");
 
@@ -60,7 +60,7 @@ createRoverAndMove = (instructions, rover, i, gridX, gridY) => {
     startInstructions[1]
   );
 
-  instructionTranslator(moveInstructions, rover, gridX, gridY); //calls instruction translator to translate movement instructions of rover i
+  instructionTranslator(moveInstructions, rover, marsGrid); //calls instruction translator to translate movement instructions of rover i
 
   return rover;
 };

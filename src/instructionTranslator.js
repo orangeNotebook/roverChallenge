@@ -1,13 +1,12 @@
 //importing
 const gridDetection = require("./gridDetection.js");
 
-module.exports = (instructions, rover, gridX, gridY) => {
-  //loops the amount of times as instructions in array
+module.exports = (instructions, rover, marsGrid) => {
   for (var i = 0; i < instructions.length; i++) {
     //checks if rover is alive, if yea performs movement instructions
     if (rover.alive == true) {
       //checks if the rover is looking towards the corpse of a previous rover, if yes skips the 'F' instruction
-      if (gridDetection(rover, gridX, gridY) == true) {
+      if (gridDetection(rover, marsGrid) == true) {
         //checks if rover instruction is 'F'
         if (instructions[i] == "F") {
           rover.Forward(); //moves the rover forward one space in the direction it's facing
